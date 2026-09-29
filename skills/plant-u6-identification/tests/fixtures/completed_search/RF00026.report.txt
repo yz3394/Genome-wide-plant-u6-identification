@@ -1,0 +1,125 @@
+# cmsearch :: search CM(s) against a sequence database
+# INFERNAL 1.1.5 (Sep 2023)
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query CM file:                         /source/plant-u6-identification/resources/models/RF00026_U6.cm
+# target sequence database:              /source/plant-u6-identification/tests/fixtures/mini_genome.fa
+# output directed to file:               /source/public_fixture_run/01_search/RF00026.report.txt
+# MSA of significant hits saved to file: /source/public_fixture_run/01_search/RF00026.alignments.sto
+# tabular output of hits:                /source/public_fixture_run/01_search/RF00026.tblout
+# max ASCII text line length:            unlimited
+# sequence reporting threshold:          score >= 20
+# sequence inclusion threshold:          score >= 20
+# number of worker threads:              2 [--cpu]
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       U6  [CLEN=105]
+Accession:   RF00026
+Description: U6 spliceosomal RNA
+Hit scores:
+ rank     E-value  score  bias  sequence               start    end   mdl trunc   gc  description
+ ----   --------- ------ -----  --------------------- ------ ------   --- ----- ----  -----------
+  (1) !   9.4e-33  112.4   0.0  grape_VvU6_1            1103   1001 -  cm    no 0.45  -
+  (2) !   9.4e-33  112.4   0.0  grape_VvU6_2            1103   1001 -  cm    no 0.45  -
+  (3) !   1.1e-28   99.0   0.0  rice_OsU6a              1103   1001 -  cm    no 0.41  -
+  (4) !     6e-26   90.0   0.0  rice_CM_rescue          1001   1107 +  cm    no 0.43  -
+  (5) !   3.5e-16   57.9   0.0  grape_partial_control   1102   1001 -  cm    no 0.35  -
+  (6) !   1.7e-10   39.2   0.0  grape_partial_control   1589   1661 +  cm    no 0.33  -
+
+
+Hit alignments:
+>> grape_VvU6_1  
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (1) !   9.4e-33  112.4   0.0  cm        1      105 []        1103        1001 - .. 1.00    no 0.45
+
+                                                                                                                               NC
+                    <<<<<_______>>>>>:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.::::::::::::::::::::: CS
+            U6    1 guccccgUUCGggggacAUauaaUaAAaUUGgAACgAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACgcaaaau.cgaGAaauguuccauaUUUUU 105 
+                    GUC:C  UUCG G:GACAU  +AUAAAAUUGGAACGAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACGCA AA  CGAGAAAUG UCCA+AUUUUU
+  grape_VvU6_1 1103 GUCUC--UUCG-GAGACAUCCGAUAAAAUUGGAACGAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACGCACAAAuCGAGAAAUGGUCCAAAUUUUU 1001
+                    *****..****.***********************************************************************99********************* PP
+
+>> grape_VvU6_2  
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (2) !   9.4e-33  112.4   0.0  cm        1      105 []        1103        1001 - .. 1.00    no 0.45
+
+                                                                                                                               NC
+                    <<<<<_______>>>>>:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.::::::::::::::::::::: CS
+            U6    1 guccccgUUCGggggacAUauaaUaAAaUUGgAACgAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACgcaaaau.cgaGAaauguuccauaUUUUU 105 
+                    GUC:C  UUCG G:GACAU  +AUAAAAUUGGAACGAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACGCA AA  CGAGAAAUG UCCA+AUUUUU
+  grape_VvU6_2 1103 GUCUC--UUCG-GAGACAUCCGAUAAAAUUGGAACGAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACGCACAAAuCGAGAAAUGGUCCAAAUUUUU 1001
+                    *****..****.***********************************************************************99********************* PP
+
+>> rice_OsU6a  
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (3) !   1.1e-28   99.0   0.0  cm        1      105 []        1103        1001 - .. 0.99    no 0.41
+
+                    v v       v v                                                                                            NC
+                  <<<<<_______>>>>>:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.::::::::::::::::::::: CS
+          U6    1 guccccgUUCGggggacAUauaaUaAAaUUGgAACgAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACgcaaaau.cgaGAaauguuccauaUUUUU 105 
+                  GU :   UUCG  : ACAU  +AUAAAAUUGGAACGAUACAGA AAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACG A AA  CGAGAAAUG UCCA+AUUUUU
+  rice_OsU6a 1103 GUCUC--UUCG-AAAACAUCCGAUAAAAUUGGAACGAUACAGAUAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACGUACAAAuCGAGAAAUGGUCCAAAUUUUU 1001
+                  **999..****.99********************************************************************999********************* PP
+
+>> rice_CM_rescue  
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (4) !     6e-26   90.0   0.0  cm        1      105 []        1001        1107 + .. 0.98    no 0.43
+
+                                                                                                                                  NC
+                      <<<<<__._____>>>>>:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.::::::::::::::::::::: CS
+              U6    1 guccccg.UUCGggggacAUauaaUaAAaUUGgAACgAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACgcaaaau.cgaGAaauguuccauaUUUUU 105 
+                      G ::C+  U   +G:: C  +  AUAAAAU G+AACGAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGG UGACACGCA AA  CGAGAAAUG UCCA+ U UUU
+  rice_CM_rescue 1001 GUAGCUUaUAUACGCUGCUGUGCAUAAAAUAGAAACGAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGUUGACACGCACAAAuCGAGAAAUGGUCCAAGUAUUU 1107
+                      *****99766669***********************************************************************99********************* PP
+
+>> grape_partial_control  
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (5) !   3.5e-16   57.9   0.0  cm        1      105 []        1102        1001 - .. 0.97    no 0.35
+
+                                                                                                                                        NC
+                             <<<<<_______>>>>>:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.::::::::::::::::::::: CS
+                     U6    1 guccccgUUCGggggacAUauaaUaAAaUUGgAACgAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACgcaaaau.cgaGAaauguuccauaUUUUU 105 
+                             :::::       :::::  AU++U  A   GG  C+ UACAGAGAAGAUUA CAUGG CC U C+ AAGGAUGA A+GCA AA  C+AGAAAUG UCCA+AUUUUU
+  grape_partial_control 1102 UGGAUAU----UAUCCAUAAUGUUGGAUGCGGGUCAUUACAGAGAAGAUUAACAUGGUCCUUACAGAAGGAUGAUAUGCACAAAuCAAGAAAUGGUCCAAAUUUUU 1001
+                             ****963....39**********************************************************************99********************* PP
+
+>> grape_partial_control  
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (6) !   1.7e-10   39.2   0.0  cm        1      105 []        1589        1661 + .. 0.95    no 0.33
+
+                                                                                                          NC
+                             ~~~~~~::::::::::::::::::::::::::::::::::::::::::::::::.::::::::::::::::::::: CS
+                     U6    1 *[36]*AUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACgcaaaau.cgaGAaauguuccauaUUUUU 105 
+                                    UACA A  AGAUUA CAUG C C UG GCAAGGAUGACAC CA+AA  CGAGAAAUG U+CA++UU UU
+  grape_partial_control 1589 *[ 3]*UUACAAAUGAGAUUAUCAUGACUCAUGUGCAAGGAUGACACACAUAAAuCGAGAAAUGGUACAAUUUAUU 1661
+                             ...7..5788888889*************************************99********************* PP
+
+
+
+Internal CM pipeline statistics summary:
+----------------------------------------
+Query model(s):                                                  1  (105 consensus positions)
+Target sequences:                                                8  (33764 residues searched)
+Target sequences re-searched for truncated hits:                 8  (5824 residues re-searched)
+Windows   passing  local HMM SSV           filter:             103  (0.5627); expected (0.35)
+Windows   passing  local HMM Viterbi       filter:                  (off)
+Windows   passing  local HMM Viterbi  bias filter:                  (off)
+Windows   passing  local HMM Forward       filter:              61  (0.3575); expected (0.02)
+Windows   passing  local HMM Forward  bias filter:              15  (0.102); expected (0.02)
+Windows   passing glocal HMM Forward       filter:              12  (0.09829); expected (0.02)
+Windows   passing glocal HMM Forward  bias filter:              12  (0.09829); expected (0.02)
+Envelopes passing glocal HMM envelope defn filter:              12  (0.03941); expected (0.02)
+Envelopes passing  local CM  CYK           filter:               6  (0.017); expected (0.0001)
+Total CM hits reported:                                          6  (0.01493); includes 0 truncated hit(s)
+
+# CPU time: 0.15u 0.01s 00:00:00.16 Elapsed: 00:00:00.17
+# Alignment of 6 hits satisfying inclusion thresholds saved to: /source/public_fixture_run/01_search/RF00026.alignments.sto
+//
+[ok]

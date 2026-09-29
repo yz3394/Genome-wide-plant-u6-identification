@@ -1,0 +1,13 @@
+#target name         accession query name           accession mdl mdl from   mdl to seq from   seq to strand trunc pass   gc  bias  score   E-value inc description of target
+#------------------- --------- -------------------- --------- --- -------- -------- -------- -------- ------ ----- ---- ---- ----- ------ --------- --- ---------------------
+rice_U6atac          -         U6atac               RF00619    cm        1      126     1124     1001      -    no    1 0.52   0.0   92.5   2.3e-25 !   -
+#
+# Program:         cmsearch
+# Version:         1.1.5 (Sep 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /source/plant-u6-identification/resources/models/RF00619_U6atac_exclusion.cm
+# Target file:     /source/plant-u6-identification/tests/fixtures/mini_genome.fa
+# Option settings: /source/private-development-archive/.tools/infernal-1.1.5/bin/cmsearch -o /source/public_fixture_run/01_search/RF00619.report.txt -A /source/public_fixture_run/01_search/RF00619.alignments.sto --tblout /source/public_fixture_run/01_search/RF00619.tblout --notextw -T 20.0 --incT 20.0 --cpu 2 /source/plant-u6-identification/resources/models/RF00619_U6atac_exclusion.cm /source/plant-u6-identification/tests/fixtures/mini_genome.fa 
+# Current dir:     /source/workspace
+# Date:            Mon Sep 28 19:01:23 2026
+# [ok]

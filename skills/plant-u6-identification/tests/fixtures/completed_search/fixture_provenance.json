@@ -1,0 +1,76 @@
+{
+  "origin": "Actual BLASTN plus RF00026 and RF00619 CM searches on the public composite",
+  "privacy": "Local execution paths redacted; original-to-public hashes retained by maintainer",
+  "source_files": [
+    {
+      "name": "RF00026.alignments.sto",
+      "sha256": "7b7f64fb29c059cadc61997d1b1765ee024c50e443a0da6eeb254f6376cd31c3",
+      "bytes": 2157
+    },
+    {
+      "name": "RF00026.report.txt",
+      "sha256": "6845b1e66b1987235e28e9757638c36e441444b242aa3a9b422f6a854e002566",
+      "bytes": 9934
+    },
+    {
+      "name": "RF00026.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "name": "RF00026.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "name": "RF00026.tblout",
+      "sha256": "dfd92cad8a1feddc46b707410416b92654da98e93df4b83a2f3c13bfe3e61464",
+      "bytes": 2060
+    },
+    {
+      "name": "RF00619.alignments.sto",
+      "sha256": "9b98271bda85856e9b69404a048ee1db8bc178f2bda847c648ae23195e5603ac",
+      "bytes": 683
+    },
+    {
+      "name": "RF00619.report.txt",
+      "sha256": "8adbfc269a1881b77d52974345235a2005e61b2d498344e7f8b70e37e60c5d83",
+      "bytes": 4156
+    },
+    {
+      "name": "RF00619.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "name": "RF00619.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "name": "RF00619.tblout",
+      "sha256": "e9c6327fcd17d0a31b3189e8811aa08a88d03a449c4db7b6b4e1b6beb6b55910",
+      "bytes": 1310
+    },
+    {
+      "name": "blastn.stderr.log",
+      "sha256": "dc2662aedf6f15aa5f2d80240dcca13dd4701e2e124895352ab901da79168376",
+      "bytes": 82
+    },
+    {
+      "name": "blastn.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "name": "search_run.json",
+      "sha256": "e23cd1a4c0e482010dd240118c978d4419174cc0f183ee6571cba428b911bff7",
+      "bytes": 15289
+    },
+    {
+      "name": "u6_blastn_short_18col.tsv",
+      "sha256": "026f27d94f2b883a2436496a501001f750ac642038c1274caf5910f372c9e992",
+      "bytes": 8140
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+# cmsearch :: search CM(s) against a sequence database
+# INFERNAL 1.1.5 (Sep 2023)
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query CM file:                         /source/plant-u6-identification/resources/models/RF00619_U6atac_exclusion.cm
+# target sequence database:              /source/plant-u6-identification/tests/fixtures/mini_genome.fa
+# output directed to file:               /source/public_fixture_run/01_search/RF00619.report.txt
+# MSA of significant hits saved to file: /source/public_fixture_run/01_search/RF00619.alignments.sto
+# tabular output of hits:                /source/public_fixture_run/01_search/RF00619.tblout
+# max ASCII text line length:            unlimited
+# sequence reporting threshold:          score >= 20
+# sequence inclusion threshold:          score >= 20
+# number of worker threads:              2 [--cpu]
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       U6atac  [CLEN=126]
+Accession:   RF00619
+Description: U6atac minor spliceosomal RNA
+Hit scores:
+ rank     E-value  score  bias  sequence     start    end   mdl trunc   gc  description
+ ----   --------- ------ -----  ----------- ------ ------   --- ----- ----  -----------
+  (1) !   2.3e-25   92.5   0.0  rice_U6atac   1124   1001 -  cm    no 0.52  -
+
+
+Hit alignments:
+>> rice_U6atac  
+ rank     E-value  score  bias mdl mdl from   mdl to       seq from      seq to       acc trunc   gc
+ ----   --------- ------ ----- --- -------- --------    ----------- -----------      ---- ----- ----
+  (1) !   2.3e-25   92.5   0.0  cm        1      126 []        1124        1001 - .. 0.98    no 0.52
+
+                                                                                                   v           v                 v       v           NC
+                   ::::::::::::::::::::::::::::::::::::::::::::::::::::<<<<____>>>>--------.-------<<<<.-------<<<<<<_______>>>>>>---.>>>>:::::::::: CS
+       U6atac    1 GUGUUGUaUGAAAGGAGAGAAGGUUAGCAcUCCCCUuGACAAGGAuGGAAaaggcCuUcgGgccuuacAaCA.CacAuAcgguu.AAGGCauugCcaccuacuucgugGcaUcu.aaccAauuUUUUUU 126 
+                   GUGUU  + GAAAGGAGAGA GGUU GCA+ +CCC UGACA GGA+GG A+ :GC:UUCG:GC:UU C  CA CACAU   G:U AAGGC+  :C:::     UC:::G: UCU A:C AA+UUUUUUU
+  rice_U6atac 1124 GUGUUCGUAGAAAGGAGAGACGGUUGGCAUCUCCCCUGACAGGGACGGGAUCAGCUUUCGGGCUUUCCUCCAuCACAUUGCGGUuAAGGCUACCCGCU-----UCGGCGGAUCUuACCCAAAUUUUUUU 1001
+                   *********************************************************************99889**********9************9.....89********89************** PP
+
+
+
+Internal CM pipeline statistics summary:
+----------------------------------------
+Query model(s):                                                  1  (126 consensus positions)
+Target sequences:                                                8  (33764 residues searched)
+Target sequences re-searched for truncated hits:                 8  (5024 residues re-searched)
+Windows   passing  local HMM SSV           filter:             120  (0.5783); expected (0.35)
+Windows   passing  local HMM Viterbi       filter:                  (off)
+Windows   passing  local HMM Viterbi  bias filter:                  (off)
+Windows   passing  local HMM Forward       filter:              28  (0.1597); expected (0.02)
+Windows   passing  local HMM Forward  bias filter:              13  (0.08026); expected (0.02)
+Windows   passing glocal HMM Forward       filter:              10  (0.06747); expected (0.02)
+Windows   passing glocal HMM Forward  bias filter:              10  (0.06747); expected (0.02)
+Envelopes passing glocal HMM envelope defn filter:              10  (0.03452); expected (0.02)
+Envelopes passing  local CM  CYK           filter:               6  (0.01833); expected (0.0001)
+Total CM hits reported:                                          1  (0.003197); includes 0 truncated hit(s)
+
+# CPU time: 0.22u 0.01s 00:00:00.23 Elapsed: 00:00:00.25
+# Alignment of 1 hits satisfying inclusion thresholds saved to: /source/public_fixture_run/01_search/RF00619.alignments.sto
+//
+[ok]

@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-09-28T23:01:23+00:00",
+  "dry_run": false,
+  "output_directory": "/source/public_fixture_run/01_search",
+  "status": "completed",
+  "inputs": {
+    "genome": {
+      "path": "/source/plant-u6-identification/tests/fixtures/mini_genome.fa",
+      "size_bytes": 17218,
+      "sha256": "dd6aae305b3b197095c5560440c1467e156cffa140d3048222ab35101ebcc034",
+      "fasta_records": 8
+    },
+    "queries": {
+      "path": "/source/plant-u6-identification/resources/queries/U6_all_queries.fasta",
+      "size_bytes": 647,
+      "sha256": "e7e1b6075f2ef7c07c0b2a490b8fbb36f3ea84be01d74a62a438d4ff48172f4e",
+      "fasta_records": 4
+    },
+    "u6_model": {
+      "path": "/source/plant-u6-identification/resources/models/RF00026_U6.cm",
+      "size_bytes": 68972,
+      "sha256": "49ad806984af8f3bb53b93ed5a7c84fa4d547f898c4427443b52f6b10df7a627"
+    },
+    "atac_model": {
+      "path": "/source/plant-u6-identification/resources/models/RF00619_U6atac_exclusion.cm",
+      "size_bytes": 83434,
+      "sha256": "a3e7d752503ea81e9fa742efb4760dc5e1b038ade0a3636ddcdc90074e9d0367"
+    }
+  },
+  "models": {
+    "RF00026": {
+      "accession": "RF00026",
+      "name": "U6",
+      "clen": 105,
+      "ga": 44.0,
+      "window": 182,
+      "source": "/source/plant-u6-identification/resources/models/RF00026_U6.cm"
+    },
+    "RF00619": {
+      "accession": "RF00619",
+      "name": "U6atac",
+      "clen": 126,
+      "ga": 33.0,
+      "window": 154,
+      "source": "/source/plant-u6-identification/resources/models/RF00619_U6atac_exclusion.cm"
+    }
+  },
+  "commands": [
+    {
+      "name": "blastn",
+      "argv": [
+        "/source/tools/bin/blastn",
+        "-task",
+        "blastn-short",
+        "-query",
+        "/source/plant-u6-identification/resources/queries/U6_all_queries.fasta",
+        "-subject",
+        "/source/plant-u6-identification/tests/fixtures/mini_genome.fa",
+        "-strand",
+        "both",
+        "-dust",
+        "no",
+        "-soft_masking",
+        "false",
+        "-evalue",
+        "1000",
+        "-perc_identity",
+        "60",
+        "-qcov_hsp_perc",
+        "50",
+        "-max_target_seqs",
+        "100000",
+        "-num_threads",
+        "2",
+        "-reward",
+        "1",
+        "-penalty",
+        "-3",
+        "-gapopen",
+        "5",
+        "-gapextend",
+        "2",
+        "-word_size",
+        "7",
+        "-outfmt",
+        "7 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovhsp qseq sseq btop",
+        "-out",
+        "/source/public_fixture_run/01_search/u6_blastn_short_18col.tsv"
+      ],
+      "expected_outputs": [
+        "/source/public_fixture_run/01_search/u6_blastn_short_18col.tsv"
+      ],
+      "shell_display": "/source/tools/bin/blastn -task blastn-short -query /source/plant-u6-identification/resources/queries/U6_all_queries.fasta -subject /source/plant-u6-identification/tests/fixtures/mini_genome.fa -strand both -dust no -soft_masking false -evalue 1000 -perc_identity 60 -qcov_hsp_perc 50 -max_target_seqs 100000 -num_threads 2 -reward 1 -penalty -3 -gapopen 5 -gapextend 2 -word_size 7 -outfmt '7 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen qcovhsp qseq sseq btop' -out /source/public_fixture_run/01_search/u6_blastn_short_18col.tsv",
+      "started_utc": "2026-09-28T23:01:23+00:00",
+      "stdout_path": "/source/public_fixture_run/01_search/blastn.stdout.log",
+      "stderr_path": "/source/public_fixture_run/01_search/blastn.stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-09-28T23:01:23+00:00"
+    },
+    {
+      "name": "RF00026",
+      "argv": [
+        "/source/private-development-archive/.tools/infernal-1.1.5/bin/cmsearch",
+        "--cpu",
+        "2",
+        "--notextw",
+        "-T",
+        "20.0",
+        "--incT",
+        "20.0",
+        "--tblout",
+        "/source/public_fixture_run/01_search/RF00026.tblout",
+        "-o",
+        "/source/public_fixture_run/01_search/RF00026.report.txt",
+        "-A",
+        "/source/public_fixture_run/01_search/RF00026.alignments.sto",
+        "/source/plant-u6-identification/resources/models/RF00026_U6.cm",
+        "/source/plant-u6-identification/tests/fixtures/mini_genome.fa"
+      ],
+      "expected_outputs": [
+        "/source/public_fixture_run/01_search/RF00026.tblout",
+        "/source/public_fixture_run/01_search/RF00026.report.txt"
+      ],
+      "optional_outputs": [
+        "/source/public_fixture_run/01_search/RF00026.alignments.sto"
+      ],
+      "shell_display": "/source/private-development-archive/.tools/infernal-1.1.5/bin/cmsearch --cpu 2 --notextw -T 20.0 --incT 20.0 --tblout /source/public_fixture_run/01_search/RF00026.tblout -o /source/public_fixture_run/01_search/RF00026.report.txt -A /source/public_fixture_run/01_search/RF00026.alignments.sto /source/plant-u6-identification/resources/models/RF00026_U6.cm /source/plant-u6-identification/tests/fixtures/mini_genome.fa",
+      "started_utc": "2026-09-28T23:01:23+00:00",
+      "stdout_path": "/source/public_fixture_run/01_search/RF00026.stdout.log",
+      "stderr_path": "/source/public_fixture_run/01_search/RF00026.stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-09-28T23:01:23+00:00"
+    },
+    {
+      "name": "RF00619",
+      "argv": [
+        "/source/private-development-archive/.tools/infernal-1.1.5/bin/cmsearch",
+        "--cpu",
+        "2",
+        "--notextw",
+        "-T",
+        "20.0",
+        "--incT",
+        "20.0",
+        "--tblout",
+        "/source/public_fixture_run/01_search/RF00619.tblout",
+        "-o",
+        "/source/public_fixture_run/01_search/RF00619.report.txt",
+        "-A",
+        "/source/public_fixture_run/01_search/RF00619.alignments.sto",
+        "/source/plant-u6-identification/resources/models/RF00619_U6atac_exclusion.cm",
+        "/source/plant-u6-identification/tests/fixtures/mini_genome.fa"
+      ],
+      "expected_outputs": [
+        "/source/public_fixture_run/01_search/RF00619.tblout",
+        "/source/public_fixture_run/01_search/RF00619.report.txt"
+      ],
+      "optional_outputs": [
+        "/source/public_fixture_run/01_search/RF00619.alignments.sto"
+      ],
+      "shell_display": "/source/private-development-archive/.tools/infernal-1.1.5/bin/cmsearch --cpu 2 --notextw -T 20.0 --incT 20.0 --tblout /source/public_fixture_run/01_search/RF00619.tblout -o /source/public_fixture_run/01_search/RF00619.report.txt -A /source/public_fixture_run/01_search/RF00619.alignments.sto /source/plant-u6-identification/resources/models/RF00619_U6atac_exclusion.cm /source/plant-u6-identification/tests/fixtures/mini_genome.fa",
+      "started_utc": "2026-09-28T23:01:23+00:00",
+      "stdout_path": "/source/public_fixture_run/01_search/RF00619.stdout.log",
+      "stderr_path": "/source/public_fixture_run/01_search/RF00619.stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-09-28T23:01:23+00:00"
+    }
+  ],
+  "blast_scoring": {
+    "reward": 1,
+    "penalty": -3,
+    "gapopen": 5,
+    "gapextend": 2,
+    "word_size": 7
+  },
+  "blast_profile": "historical_blastn_short_explicit_1_minus3_gap5_2_word7",
+  "scoring_validation": "BLAST 2.16.0+ local query-panel self-search pairwise footer confirmed matrix 1 -3 and gap 5/2 on 2026-09-28",
+  "blast_output_fields": [
+    "qseqid",
+    "sseqid",
+    "pident",
+    "length",
+    "mismatch",
+    "gapopen",
+    "qstart",
+    "qend",
+    "sstart",
+    "send",
+    "evalue",
+    "bitscore",
+    "qlen",
+    "slen",
+    "qcovhsp",
+    "qseq",
+    "sseq",
+    "btop"
+  ],
+  "cm_reporting_score": 20.0,
+  "scope": "Each of RF00026, RF00619 and BLASTN independently scans every supplied FASTA record on both strands",
+  "evidence_limits": [
+    "Input FASTA nuclear content and assembly quality require a separate reference audit",
+    "CM reporting cutoff is not GA; GA and CLEN are read from each frozen model",
+    "Infernal heuristic filters remain enabled; absence is not an exhaustive negative proof",
+    "No expression, promoter activity, pseudogene or candidate-grade decision is made here",
+    "Historical bit-score thresholds are not validated for a different BLAST scoring profile"
+  ],
+  "tools": {
+    "blastn": "/source/tools/bin/blastn",
+    "cmsearch": "/source/private-development-archive/.tools/infernal-1.1.5/bin/cmsearch"
+  },
+  "versions": {
+    "blastn": {
+      "argv": [
+        "/source/tools/bin/blastn",
+        "-version"
+      ],
+      "started_utc": "2026-09-28T23:01:23+00:00",
+      "finished_utc": "2026-09-28T23:01:23+00:00",
+      "exit_code": 0,
+      "stdout": "blastn: 2.16.0+\n Package: blast 2.16.0, build Mar 28 2025 16:33:14\n",
+      "stderr": ""
+    },
+    "cmsearch": {
+      "argv": [
+        "/source/private-development-archive/.tools/infernal-1.1.5/bin/cmsearch",
+        "-h"
+      ],
+      "started_utc": "2026-09-28T23:01:23+00:00",
+      "finished_utc": "2026-09-28T23:01:23+00:00",
+      "exit_code": 0,
+      "stdout": "# cmsearch :: search CM(s) against a sequence database\n# INFERNAL 1.1.5 (Sep 2023)\n# Copyright (C) 2023 Howard Hughes Medical Institute.\n# Freely distributed under the BSD open source license.\n# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nUsage: cmsearch [options] <cmfile> <seqdb>\n\nBasic options:\n  -h        : show brief help on version and usage\n  -g        : configure CM for glocal alignment [default: local]\n  -Z <x>    : set search space size in *Mb* to <x> for E-value calculations  (x>0)\n  --devhelp : show list of otherwise hidden developer/expert options\n\nOptions directing output:\n  -o <f>       : direct output to file <f>, not stdout\n  -A <f>       : save multiple alignment of all significant hits to file <s>\n  --tblout <f> : save parseable table of hits to file <s>\n  --fmt <n>    : set hit table format to <n>  (1<=n<=3)\n  --acc        : prefer accessions over names in output\n  --noali      : don't output alignments, so output is smaller\n  --notextw    : unlimit ASCII text output line width\n  --textw <n>  : set max width of ASCII text output lines  [120]  (n>=120)\n  --verbose    : report extra information; mainly useful for debugging\n  --nomiss     : with -A, do not mark truncated hits with missing (~) chars\n\nOptions controlling reporting thresholds:\n  -E <x> : report sequences <= this E-value threshold in output  [10.0]  (x>0)\n  -T <x> : report sequences >= this score threshold in output\n\nOptions controlling inclusion (significance) thresholds:\n  --incE <x> : consider sequences <= this E-value threshold as significant  [0.01]\n  --incT <x> : consider sequences >= this score threshold as significant\n\nOptions controlling model-specific reporting thresholds:\n  --cut_ga : use CM's GA gathering cutoffs as reporting thresholds\n  --cut_nc : use CM's NC noise cutoffs as reporting thresholds\n  --cut_tc : use CM's TC trusted cutoffs as reporting thresholds\n\nOptions controlling acceleration heuristics*:\n  --max      : turn all heuristic filters off (slow)\n  --nohmm    : skip all HMM filter stages, use only CM (slow)\n  --mid      : skip first two HMM filter stages (SSV & Vit)\n  --default  : default: run search space size-dependent pipeline  [default]\n  --rfam     : set heuristic filters at Rfam-level (fast)\n  --hmmonly  : use HMM only, don't use a CM at all\n  --FZ <x>   : set filters to defaults used for a search space of size <x> Mb\n  --Fmid <x> : with --mid, set P-value threshold for HMM stages to <x>  [0.02]\n\nOther options*:\n  --notrunc     : do not allow truncated hits at sequence termini\n  --anytrunc    : allow full+truncated hits at terminii and anywhere within seqs\n  --nonull3     : turn off the NULL3 post hoc additional null model\n  --mxsize <x>  : set max allowed alnment mx size to <x> Mb [df: autodetermined]\n  --smxsize <x> : set max allowed size of search DP matrices to <x> Mb  [128.]\n  --cyk         : use scanning CM CYK algorithm, not Inside in final stage\n  --acyk        : align hits with CYK, not optimal accuracy\n  --wcx <x>     : set W (expected max hit len) as <x> * cm->clen (model len)\n  --toponly     : only search the top strand\n  --bottomonly  : only search the bottom strand\n  --tformat <s> : assert target <seqdb> is in format <s>: no autodetection\n  --cpu <n>     : number of parallel CPU workers to use for multithreads  [4]\n\n*Use --devhelp to show additional expert options.\n",
+      "stderr": ""
+    }
+  },
+  "started_utc": "2026-09-28T23:01:23+00:00",
+  "outputs": [
+    {
+      "path": "/source/public_fixture_run/01_search/RF00026.alignments.sto",
+      "size_bytes": 2157,
+      "sha256": "7b7f64fb29c059cadc61997d1b1765ee024c50e443a0da6eeb254f6376cd31c3"
+    },
+    {
+      "path": "/source/public_fixture_run/01_search/RF00026.report.txt",
+      "size_bytes": 9934,
+      "sha256": "6845b1e66b1987235e28e9757638c36e441444b242aa3a9b422f6a854e002566"
+    },
+    {
+      "path": "/source/public_fixture_run/01_search/RF00026.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/source/public_fixture_run/01_search/RF00026.stdout.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/source/public_fixture_run/01_search/RF00026.tblout",
+      "size_bytes": 2060,
+      "sha256": "dfd92cad8a1feddc46b707410416b92654da98e93df4b83a2f3c13bfe3e61464"
+    },
+    {
+      "path": "/source/public_fixture_run/01_search/RF00619.alignments.sto",
+      "size_bytes": 683,
+      "sha256": "9b98271bda85856e9b69404a048ee1db8bc178f2bda847c648ae23195e5603ac"
+    },
+    {
+      "path": "/source/public_fixture_run/01_search/RF00619.report.txt",
+      "size_bytes": 4156,
+      "sha256": "8adbfc269a1881b77d52974345235a2005e61b2d498344e7f8b70e37e60c5d83"
+    },
+    {
+      "path": "/source/public_fixture_run/01_search/RF00619.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/source/public_fixture_run/01_search/RF00619.stdout.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/source/public_fixture_run/01_search/RF00619.tblout",
+      "size_bytes": 1310,
+      "sha256": "e9c6327fcd17d0a31b3189e8811aa08a88d03a449c4db7b6b4e1b6beb6b55910"
+    },
+    {
+      "path": "/source/public_fixture_run/01_search/blastn.stderr.log",
+      "size_bytes": 82,
+      "sha256": "dc2662aedf6f15aa5f2d80240dcca13dd4701e2e124895352ab901da79168376"
+    },
+    {
+      "path": "/source/public_fixture_run/01_search/blastn.stdout.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/source/public_fixture_run/01_search/u6_blastn_short_18col.tsv",
+      "size_bytes": 8140,
+      "sha256": "026f27d94f2b883a2436496a501001f750ac642038c1274caf5910f372c9e992"
+    }
+  ],
+  "finished_utc": "2026-09-28T23:01:23+00:00",
+  "public_derivative": {
+    "note": "Actual search on eight public rice/grape reference segments; provenance paths redacted after execution; no alignment or result row edited."
+  }
+}

@@ -1,0 +1,18 @@
+#target name          accession query name           accession mdl mdl from   mdl to seq from   seq to strand trunc pass   gc  bias  score   E-value inc description of target
+#-------------------- --------- -------------------- --------- --- -------- -------- -------- -------- ------ ----- ---- ---- ----- ------ --------- --- ---------------------
+grape_VvU6_1          -         U6                   RF00026    cm        1      105     1103     1001      -    no    1 0.45   0.0  112.4   9.4e-33 !   -
+grape_VvU6_2          -         U6                   RF00026    cm        1      105     1103     1001      -    no    1 0.45   0.0  112.4   9.4e-33 !   -
+rice_OsU6a            -         U6                   RF00026    cm        1      105     1103     1001      -    no    1 0.41   0.0   99.0   1.1e-28 !   -
+rice_CM_rescue        -         U6                   RF00026    cm        1      105     1001     1107      +    no    1 0.43   0.0   90.0     6e-26 !   -
+grape_partial_control -         U6                   RF00026    cm        1      105     1102     1001      -    no    1 0.35   0.0   57.9   3.5e-16 !   -
+grape_partial_control -         U6                   RF00026    cm        1      105     1589     1661      +    no    1 0.33   0.0   39.2   1.7e-10 !   -
+#
+# Program:         cmsearch
+# Version:         1.1.5 (Sep 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /source/plant-u6-identification/resources/models/RF00026_U6.cm
+# Target file:     /source/plant-u6-identification/tests/fixtures/mini_genome.fa
+# Option settings: /source/private-development-archive/.tools/infernal-1.1.5/bin/cmsearch -o /source/public_fixture_run/01_search/RF00026.report.txt -A /source/public_fixture_run/01_search/RF00026.alignments.sto --tblout /source/public_fixture_run/01_search/RF00026.tblout --notextw -T 20.0 --incT 20.0 --cpu 2 /source/plant-u6-identification/resources/models/RF00026_U6.cm /source/plant-u6-identification/tests/fixtures/mini_genome.fa 
+# Current dir:     /source/workspace
+# Date:            Mon Sep 28 19:01:23 2026
+# [ok]
