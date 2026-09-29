@@ -1,0 +1,44 @@
+{
+  "version": "1.0.1",
+  "status": "locally_verified_for_publication",
+  "repository": "https://github.com/yz3394/Genome-wide-plant-u6-identification",
+  "unit_tests": {
+    "run": 120,
+    "passed": 120,
+    "skipped": 0
+  },
+  "mini_reference": {
+    "records": 8,
+    "bases": 16882,
+    "canonical_U6": 5,
+    "case_checks_passed": 40,
+    "searches": "fresh BLASTN, RF00026 and RF00619"
+  },
+  "independent_QA": {
+    "status": "PASS",
+    "checks": 100,
+    "seqkit_extractions": 21
+  },
+  "runtime_sha256": {
+    "search_u6.py": "8ad60001308de170dbab836cf4a1c122e0f3970de51e76d5c83265c2bb542888",
+    "run_u6.py": "554ccfe3f6790e9f40f935c66d5f8f44b7b67c8fa3a9691993eb2394bd3f2b17",
+    "validate_outputs.py": "57f3d8a58784c7c8c237d9871f35f649f76247c5c161460bf43c19fe58910f81",
+    "u6_loci.py": "cd35883a04f8bdb83f704d213e4447b572178686d586db28812a7dd17642fc1a",
+    "u6_io.py": "f8200508143d3867c0c5f8ade1813f53ea0d17c09a8962d57a94efde7f519187",
+    "u6_promoters.py": "6cef2d141cd6f43cd82c5eeab574266501ac2dd629d057aa3835e2f735c5a955",
+    "u6_context.py": "0d029cd611df3c5d8ca8c1a039e434ab9aa8f138e6485f5e739138a6fb289fa2"
+  },
+  "dependency_versions": {
+    "python": "3.13.2",
+    "blastn": "2.16.0+",
+    "infernal": "1.1.5",
+    "seqkit": "2.13.0"
+  },
+  "platform": "macOS; other OS execution not verified",
+  "private_baseline_files_preserved": 847,
+  "limitations": [
+    "Known selected controls, not biological blind validation",
+    "No expression, native TSS or promoter activity measurement",
+    "Remote publication requires a separate readback receipt"
+  ]
+}
