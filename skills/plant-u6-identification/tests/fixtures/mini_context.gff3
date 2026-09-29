@@ -1,0 +1,15 @@
+##gff-version 3
+# Synthetic regression annotations; not complete native annotation.
+rice_OsU6a	regression_fixture	gene	1001	1103	.	-	.	ID=gene-rice_OsU6a;Name=U6;gene_biotype=snRNA
+rice_OsU6a	regression_fixture	snRNA	1001	1103	.	-	.	ID=rna-rice_OsU6a;Parent=gene-rice_OsU6a;Name=U6;product=U6 spliceosomal RNA
+rice_CM_rescue	regression_fixture	gene	1001	1107	.	+	.	ID=gene-rice_CM_rescue;Name=U6;gene_biotype=snRNA
+rice_CM_rescue	regression_fixture	snRNA	1001	1107	.	+	.	ID=rna-rice_CM_rescue;Parent=gene-rice_CM_rescue;Name=U6;product=U6 spliceosomal RNA
+grape_VvU6_1	regression_fixture	gene	1001	1103	.	-	.	ID=gene-grape_VvU6_1;Name=U6;gene_biotype=snRNA
+grape_VvU6_1	regression_fixture	snRNA	1001	1103	.	-	.	ID=rna-grape_VvU6_1;Parent=gene-grape_VvU6_1;Name=U6;product=U6 spliceosomal RNA
+grape_VvU6_2	regression_fixture	gene	1001	1103	.	-	.	ID=gene-grape_VvU6_2;Name=U6;gene_biotype=snRNA
+grape_VvU6_2	regression_fixture	snRNA	1001	1103	.	-	.	ID=rna-grape_VvU6_2;Parent=gene-grape_VvU6_2;Name=U6;product=U6 spliceosomal RNA
+grape_partial_control	regression_fixture	gene	1001	1102	.	-	.	ID=gene-grape_partial_control;Name=U6;gene_biotype=snRNA
+grape_partial_control	regression_fixture	snRNA	1001	1102	.	-	.	ID=rna-grape_partial_control;Parent=gene-grape_partial_control;Name=U6;product=U6 spliceosomal RNA
+rice_U6atac	regression_fixture	gene	1001	1124	.	-	.	ID=gene-rice_U6atac;Name=U6atac;gene_biotype=snRNA
+rice_U6atac	regression_fixture	snRNA	1001	1124	.	-	.	ID=rna-rice_U6atac;Parent=gene-rice_U6atac;Name=U6atac;product=U6atac spliceosomal RNA
+rice_CM_rescue	regression_fixture	CDS	951	970	.	+	0	ID=synthetic-foreign-cds

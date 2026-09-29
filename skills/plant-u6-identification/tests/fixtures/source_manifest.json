@@ -1,0 +1,243 @@
+{
+  "source_project_name": "U6_identification_2026",
+  "builder_sha256": "1e242cb06785950048014896e39a864226008b538bd70a32ef3e2ce3f9520b25",
+  "limitation": "Tiny extracted loci exercise regression, not genome-wide sensitivity or biological accuracy",
+  "sources": [
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/rice/run01/results/rice_U6_candidates.tsv",
+      "bytes": 37645,
+      "sha256": "556d16b9dea9486a35d56475ed873de0e1c7c96c87523f98101e2e727ea70d20",
+      "role": "frozen_candidate_evidence"
+    },
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/grape/run01/results/grape_U6_candidates.tsv",
+      "bytes": 47032,
+      "sha256": "a4bb4268799fa81adf827967b38f8584610a87abea934aad4b80aec8b5aec8a2",
+      "role": "frozen_candidate_evidence"
+    },
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/rice/heldout_controls.json",
+      "bytes": 13526,
+      "sha256": "da0ea19890c3284022656f411a18f7b51ecab9e2cb001cec9b9f889f436aaf00",
+      "role": "frozen_annotation_controls"
+    },
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/rice/inputs/GCF_001433935.1_IRGSP-1.0_nuclear_all_records.fna",
+      "bytes": 378474094,
+      "sha256": "c36a08fa09edf3e069ccb373c3bcb6b586a7904f8a7e9743371dd1cbcaef7286",
+      "role": "source_reference_for_native_orientation_subsequences"
+    },
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/rice/inputs/GCF_001433935.1_IRGSP-1.0_nuclear_all_records.fna.fai",
+      "bytes": 2014,
+      "sha256": "10d16eaf3363f9d2c018f01d1478d4e4a18eaad4213684e3eba0952540c65a7d",
+      "role": "source_reference_index"
+    },
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/grape/inputs/GCF_000003745.3_12X_nuclear.fna",
+      "bytes": 491587719,
+      "sha256": "0583a58084ed9862d87a103a9ece92a666da07439a24e88f1b6eb5eb17ed693e",
+      "role": "source_reference_for_native_orientation_subsequences"
+    },
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/grape/inputs/GCF_000003745.3_12X_nuclear.fna.fai",
+      "bytes": 69313,
+      "sha256": "f3bc70b8bd27eb50e3aa7dbabc528599dac4c5bb849956344e6e3ffc97a3d259",
+      "role": "source_reference_index"
+    },
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/rice/sources/OsU6a_Kitaake_FigS1.fasta",
+      "bytes": 565,
+      "sha256": "4c60444639e1354021c73839ca70924b94b0aebf72f82309a1f69026177545ae",
+      "role": "literature_sequence_transcription_previously_independently_verified"
+    },
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/grape/controls/Ren2021_published_promoters.fa",
+      "bytes": 2124,
+      "sha256": "2abf0afe44d13043577dda52c134738db8e583a4e181d4f5ee723311a161441b",
+      "role": "literature_sequence_transcription_previously_independently_verified"
+    },
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/grape/controls/ensembl_unplaced_mapping/all_hsps_with_coordinate_map.tsv",
+      "bytes": 6968,
+      "sha256": "19d050196a9b0c9d1a9829f41dd0173e56233bca596575be71422f7f8253d5b4",
+      "role": "partial_mapping_raw_evidence"
+    },
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/grape/controls/ensembl49_annotation_controls_all_mapped.json",
+      "bytes": 14762,
+      "sha256": "018639ee62277653a5f5f02e2660f4a7432433630279a7c9f5e04e7c8f1e1478",
+      "role": "frozen_regression_evidence"
+    },
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/rice/search/u6_blastn_short_18col.tsv",
+      "bytes": 18509,
+      "sha256": "68d163e9cb0677d4172c113651fc807a81ce79e41700ec26116e83e62bbb7f2b",
+      "role": "raw_scoring_sensitivity_evidence"
+    },
+    {
+      "path_relative_to_source_project": "10_cross_species_validation_20260928/rice/blast_sensitivity01/blastn_reward2_penalty3.tsv",
+      "bytes": 20342,
+      "sha256": "bbaad5b792a805df2805361c980fbf966fffc5a0afef20428f863df1bda2dd37",
+      "role": "raw_scoring_sensitivity_evidence"
+    }
+  ],
+  "derivatives": [
+    {
+      "fixture_id": "rice_OsU6a",
+      "species": "rice",
+      "locus_id": "OsU6L0010",
+      "seqid": "NC_029258.1",
+      "start1": 34028543,
+      "end1": 34028645,
+      "strand": "-",
+      "source_predicted_tss1": 34028645,
+      "family": "U6",
+      "expected_body_sha256": "0366107a3926b4cdaa60e72432715c85284cc8d11792b74b3b20a36b19bb0315",
+      "source_interval_start1": 34027543,
+      "source_interval_end1": 34029645,
+      "local_body_start1": 1001,
+      "local_body_end1": 1103,
+      "sequence_sha256": "7e4b072eb580d1215cb0620c365a849d77c7bc723112e25bd28125ea0aa07132",
+      "source_genome": "10_cross_species_validation_20260928/rice/inputs/GCF_001433935.1_IRGSP-1.0_nuclear_all_records.fna",
+      "local_predicted_tss1": 1103
+    },
+    {
+      "fixture_id": "rice_CM_rescue",
+      "species": "rice",
+      "locus_id": "OsU6L0022",
+      "seqid": "NC_029264.1",
+      "start1": 8177871,
+      "end1": 8177977,
+      "strand": "+",
+      "source_predicted_tss1": 8177871,
+      "family": "U6",
+      "expected_body_sha256": "279cd0bf373b876d902099cf68fc9f320abd9b112024996f44700515cef5d27a",
+      "source_interval_start1": 8176871,
+      "source_interval_end1": 8178977,
+      "local_body_start1": 1001,
+      "local_body_end1": 1107,
+      "sequence_sha256": "24b5d1fa3d9be816627955f696b069e7c957f7c8c328ed23b85a7b8ffc779939",
+      "source_genome": "10_cross_species_validation_20260928/rice/inputs/GCF_001433935.1_IRGSP-1.0_nuclear_all_records.fna",
+      "local_predicted_tss1": 1001
+    },
+    {
+      "fixture_id": "grape_VvU6_1",
+      "species": "grape",
+      "locus_id": "VvU6L0007",
+      "seqid": "NC_012009.3",
+      "start1": 5160676,
+      "end1": 5160778,
+      "strand": "-",
+      "source_predicted_tss1": 5160778,
+      "family": "U6",
+      "expected_body_sha256": "7bbee09b7f69c7a8250b59379f75c14d03b8bd21b1c0ffc141d74e0285d45ef2",
+      "source_interval_start1": 5159676,
+      "source_interval_end1": 5161778,
+      "local_body_start1": 1001,
+      "local_body_end1": 1103,
+      "sequence_sha256": "d7a2ccdb5762acd022c7ed593c939e16c61adb9f3d8865f93cf48235f9ce52f4",
+      "source_genome": "10_cross_species_validation_20260928/grape/inputs/GCF_000003745.3_12X_nuclear.fna",
+      "local_predicted_tss1": 1103
+    },
+    {
+      "fixture_id": "grape_VvU6_2",
+      "species": "grape",
+      "locus_id": "VvU6L0009",
+      "seqid": "NC_012009.3",
+      "start1": 5179503,
+      "end1": 5179605,
+      "strand": "-",
+      "source_predicted_tss1": 5179605,
+      "family": "U6",
+      "expected_body_sha256": "7bbee09b7f69c7a8250b59379f75c14d03b8bd21b1c0ffc141d74e0285d45ef2",
+      "source_interval_start1": 5178503,
+      "source_interval_end1": 5180605,
+      "local_body_start1": 1001,
+      "local_body_end1": 1103,
+      "sequence_sha256": "cce641e567fb56aa16514314fc23f264d560d1eecdff0bdbf836748ce955f67d",
+      "source_genome": "10_cross_species_validation_20260928/grape/inputs/GCF_000003745.3_12X_nuclear.fna",
+      "local_predicted_tss1": 1103
+    },
+    {
+      "fixture_id": "grape_partial_control",
+      "species": "grape",
+      "locus_id": "VvU6L0063",
+      "seqid": "NW_003724846.1",
+      "start1": 3298,
+      "end1": 3399,
+      "strand": "-",
+      "source_predicted_tss1": 3399,
+      "family": "U6",
+      "expected_body_sha256": "3be92b1eda3630a10b73471a2d6a15c5b3e2cc1f2240599146be4b8802cbbc70",
+      "source_interval_start1": 2298,
+      "source_interval_end1": 4399,
+      "local_body_start1": 1001,
+      "local_body_end1": 1102,
+      "sequence_sha256": "e587251d9ff661615d4d6e6d1d56b58ed1e7dcc3ef21a8d6486c591752c11308",
+      "source_genome": "10_cross_species_validation_20260928/grape/inputs/GCF_000003745.3_12X_nuclear.fna",
+      "local_predicted_tss1": 1102
+    },
+    {
+      "fixture_id": "rice_U6atac",
+      "species": "rice",
+      "locus_id": "XR_003240374.1",
+      "seqid": "NC_029256.1",
+      "start1": 34203179,
+      "end1": 34203302,
+      "strand": "-",
+      "family": "U6atac",
+      "source_interval_start1": 34202179,
+      "source_interval_end1": 34204302,
+      "local_body_start1": 1001,
+      "local_body_end1": 1124,
+      "sequence_sha256": "7afae0db030a5666a77700fbd78070e6b248b9e848337eec278367edc7ca4773",
+      "source_genome": "10_cross_species_validation_20260928/rice/inputs/GCF_001433935.1_IRGSP-1.0_nuclear_all_records.fna"
+    },
+    {
+      "fixture_id": "grape_VvU3_1",
+      "species": "grape",
+      "locus_id": "grape_VvU3_1",
+      "seqid": "NC_012012.3",
+      "start1": 7472816,
+      "end1": 7472935,
+      "strand": "-",
+      "family": "U3_control_window",
+      "body_endpoints_are_synthetic": true,
+      "source_interval_start1": 7471816,
+      "source_interval_end1": 7473935,
+      "local_body_start1": 1001,
+      "local_body_end1": 1120,
+      "sequence_sha256": "2400916d282f82e99dec5cd5148aa21758d09167ca66cb43f4c49701046a5666",
+      "source_genome": "10_cross_species_validation_20260928/grape/inputs/GCF_000003745.3_12X_nuclear.fna"
+    },
+    {
+      "fixture_id": "grape_VvU3_2",
+      "species": "grape",
+      "locus_id": "grape_VvU3_2",
+      "seqid": "NC_012012.3",
+      "start1": 7471859,
+      "end1": 7471978,
+      "strand": "-",
+      "family": "U3_control_window",
+      "body_endpoints_are_synthetic": true,
+      "source_interval_start1": 7470859,
+      "source_interval_end1": 7472978,
+      "local_body_start1": 1001,
+      "local_body_end1": 1120,
+      "sequence_sha256": "7a3a6e38209bca93d153a00d55055840ee12f4518cd819c46c01cfb358a995b1",
+      "source_genome": "10_cross_species_validation_20260928/grape/inputs/GCF_000003745.3_12X_nuclear.fna"
+    }
+  ],
+  "public_derivative_note": "Private project raw results and target-species fixtures are omitted. Retained original hashes describe source evidence, not the rewritten public derivative files.",
+  "synthetic_short_body_provenance": {
+    "kind": "synthetic terminal truncation, not native sequence deletion",
+    "source_accession": "NC_029258.1",
+    "source_body_start1": 34028543,
+    "source_body_end1": 34028645,
+    "source_strand": "-",
+    "operation": "Take last 73 bases of transcript-oriented public OsU6a reference body",
+    "source_body_sha256": "0366107a3926b4cdaa60e72432715c85284cc8d11792b74b3b20a36b19bb0315",
+    "sequence_sha256": "af674fa258a7004d9836bac4df8f545f3eb9899066788648cdd604b53655057f"
+  }
+}

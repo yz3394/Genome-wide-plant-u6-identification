@@ -1,0 +1,13 @@
+{
+  "key": "fixture",
+  "prefix": "Fx",
+  "species": "Composite regression segments, not a species",
+  "assembly": "public-rice-grape-regression-fixture-v1.0.1; not a biological assembly",
+  "genome": "mini_genome.fa",
+  "gff": null,
+  "threads": 2,
+  "query_panel": "../../resources/queries/U6_all_queries.fasta",
+  "historical_query": "../../resources/queries/AtU6_legacy.fasta",
+  "u6_model": "../../resources/models/RF00026_U6.cm",
+  "atac_model": "../../resources/models/RF00619_U6atac_exclusion.cm"
+}
