@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plant U6 Identification"
+  short_description: "Find plant U6 loci and audit upstream promoter evidence"
+  default_prompt: "Use $plant-u6-identification to identify U6 loci and extract evidence-bounded upstream promoters from my selected plant reference genome."
