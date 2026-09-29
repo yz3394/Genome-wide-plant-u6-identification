@@ -1,0 +1,67 @@
+{
+  "version": "1.0.1",
+  "source_freeze_date": "2026-08-24",
+  "packaged_date": "2026-09-28",
+  "rfam_release": "15.1",
+  "freshness": "Frozen tested models, not a latest-release assertion",
+  "source_files": {
+    "queries/U6_nucleotide_queries.fasta": "d907da1458da00ccdcb748ec4390eba1128ed38dab71f5229c0cbb36ff04e5c2",
+    "queries/U6_plant_sensitivity_queries.fasta": "defc0e6db51f3868526169fd3c5ff5e2a8ff06d66988d6c8c8c439dd106b62ea",
+    "u6_query_manifest.tsv": "716b52f38bd4dc3942d43b6bd4615261430848b8c4ebff7cf67f084443d03fc5",
+    "u6_model_manifest.tsv": "888f5fcc7175778271f7be3ad70a071282fdd30ad14c3fb1d8ad0c63fd0ce939",
+    "source_manifest.tsv": "40b71ac7b44ce618ec618dd35817c5ce3d8b35bea6f1cdcfb40f2005305bb398",
+    "models/RF00026_U6.cm": "49ad806984af8f3bb53b93ed5a7c84fa4d547f898c4427443b52f6b10df7a627",
+    "models/RF00619_U6atac_exclusion.cm": "a3e7d752503ea81e9fa742efb4760dc5e1b038ade0a3636ddcdc90074e9d0367"
+  },
+  "files": {
+    "models/RF00026_U6.cm": {
+      "bytes": 68972,
+      "sha256": "49ad806984af8f3bb53b93ed5a7c84fa4d547f898c4427443b52f6b10df7a627"
+    },
+    "models/RF00619_U6atac_exclusion.cm": {
+      "bytes": 83434,
+      "sha256": "a3e7d752503ea81e9fa742efb4760dc5e1b038ade0a3636ddcdc90074e9d0367"
+    },
+    "queries/AtU6_legacy.fasta": {
+      "bytes": 165,
+      "sha256": "6a8818256abb17cc73d33bab359ff30a8b2b0b945865dea89a1e2a10b5197270"
+    },
+    "queries/U6_all_queries.fasta": {
+      "bytes": 647,
+      "sha256": "e7e1b6075f2ef7c07c0b2a490b8fbb36f3ea84be01d74a62a438d4ff48172f4e"
+    },
+    "queries/U6_nucleotide_queries.fasta": {
+      "bytes": 321,
+      "sha256": "d907da1458da00ccdcb748ec4390eba1128ed38dab71f5229c0cbb36ff04e5c2"
+    },
+    "queries/U6_plant_sensitivity_queries.fasta": {
+      "bytes": 326,
+      "sha256": "defc0e6db51f3868526169fd3c5ff5e2a8ff06d66988d6c8c8c439dd106b62ea"
+    },
+    "source_manifest.tsv": {
+      "bytes": 3451,
+      "sha256": "40b71ac7b44ce618ec618dd35817c5ce3d8b35bea6f1cdcfb40f2005305bb398"
+    },
+    "u6_model_manifest.tsv": {
+      "bytes": 667,
+      "sha256": "888f5fcc7175778271f7be3ad70a071282fdd30ad14c3fb1d8ad0c63fd0ce939"
+    },
+    "u6_query_manifest.tsv": {
+      "bytes": 1862,
+      "sha256": "716b52f38bd4dc3942d43b6bd4615261430848b8c4ebff7cf67f084443d03fc5"
+    }
+  },
+  "rights_sources_checked": [
+    {
+      "url": "https://docs.rfam.org/en/latest/#license",
+      "date": "2026-09-28",
+      "summary": "Rfam data are available under CC0; retain scientific attribution."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/#data",
+      "date": "2026-09-28",
+      "summary": "NCBI places no restrictions on molecular-data use/distribution; submitter rights may still apply. No blanket rights transfer is claimed."
+    }
+  ],
+  "scope": "Two small CM files, four public nucleotide query bodies, provenance. No genome or paper PDF."
+}

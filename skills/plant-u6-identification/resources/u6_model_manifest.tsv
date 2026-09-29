@@ -1,0 +1,3 @@
+model_accession	model_name	role	rfam_release	rfam_release_date	clan	seed_n	full_n	clen	gathering_cutoff_bits	model_sha256	seed_alignment_sha256	note
+RF00026	U6	canonical_U6_structure_model	15.1	2026-01-16	CL00009	188	204442	105	44.0	49ad806984af8f3bb53b93ed5a7c84fa4d547f898c4427443b52f6b10df7a627	01e4acf899812c7aefba879804fe9dd2e56e10e7d897b0eca19bc9e9c80f36ec	Primary covariance model for sensitivity to divergent U6 homologs.
+RF00619	U6atac	exclusion_discrimination_model	15.1	2026-01-16	CL00009	62	9067	126	33.0	a3e7d752503ea81e9fa742efb4760dc5e1b038ade0a3636ddcdc90074e9d0367	NA	Same CL00009 clan; use to flag minor-spliceosome U6atac rather than canonical U6.
