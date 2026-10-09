@@ -1,5 +1,10 @@
 # Changelog
 
+## Documentation update — 2026-10-09
+
+- Translate the remaining Chinese README summary, installation prompt and repository maintenance instructions into English for sharing with colleagues.
+- Keep the skill at version 1.0.1: the skill instructions, runtime scripts, scientific thresholds, resources, fixtures and historical validation records are unchanged.
+
 ## 1.0.1 — 2026-09-28 — first public distribution
 
 - Publish `plant-u6-identification` in the owner's dedicated repository, with installation, dependency and future-release instructions.

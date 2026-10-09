@@ -2,13 +2,13 @@
 
 `plant-u6-identification` 1.0.1 is a research-grade, reference-bounded workflow for plant nuclear U6 snRNA discovery and upstream-promoter assessment. Its [entrypoint](skills/plant-u6-identification/SKILL.md) separates RNA-family support, submitted-body integrity, boundary confidence, promoter geometry, annotation overlap and experimental-source evidence.
 
-中文概要：使用 U6 转录区 BLASTN、独立全参考 RF00026/RF00619 检索，输出完整候选家族、单独的严格 AtU6 子集和链方向正确的 300/500/1000 bp 上游序列。USE/TATA 是结构线索，不是启动子表达强度或活性的证明。不能保证鉴定出所有功能性 U6，也不能替代实验验证。
+The workflow combines BLASTN searches of U6 transcribed regions with independent RF00026/RF00619 searches across the complete selected reference. It exports the full candidate family, a separate strict AtU6 subset, and strand-correct upstream sequences of 300, 500 and 1000 bp. USE/TATA motifs provide structural clues, not evidence of promoter expression strength or activity. The workflow does not guarantee recovery of every functional U6 locus or replace experimental validation.
 
 ## Install on another computer
 
 Ask Codex:
 
-> 使用 $skill-installer，从 yz3394/Genome-wide-plant-u6-identification 安装 skills/plant-u6-identification，指定版本 plant-u6-identification-v1.0.1。先检查是否已有同名技能，保留已有修改，再检查文件完整性和依赖。
+> Use $skill-installer to install skills/plant-u6-identification from yz3394/Genome-wide-plant-u6-identification at tag plant-u6-identification-v1.0.1. First check for an existing skill with the same name, preserve any local changes, and then verify file integrity and dependencies.
 
 Alternatively clone the repository at that tag, then copy the entire `skills/plant-u6-identification/` directory into your user-level `.agents/skills/` directory. Do not copy only `SKILL.md`, and do not copy an absolute symlink from another computer. Preserve an existing installation before replacing it; avoid multiple conflicting copies. Codex's local skill discovery and installer are described in the [official guide](https://learn.chatgpt.com/docs/build-skills).
 

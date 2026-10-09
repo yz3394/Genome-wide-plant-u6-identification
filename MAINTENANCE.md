@@ -1,18 +1,18 @@
-# 升级与 GitHub 同步
+# Upgrades and GitHub synchronization
 
-本仓库是 `plant-u6-identification` 的后续维护源。用户于 2026-09-28 明确要求：以后实施的已验证 skill 升级，同步到此 GitHub 仓库。该约定不是后台自动同步服务，也不授权上传研究数据。
+This repository is the source for ongoing maintenance of `plant-u6-identification`. On 2026-09-28, the owner explicitly requested that future verified skill upgrades be synchronized to this GitHub repository. This agreement does not provide a background synchronization service or authorize uploading research data.
 
-1. 同步远端，检查工作区、已安装版本和用户未提交修改；保留已有内容。
-2. 记录问题、依赖版本、来源明确的最小复现例、实际与预期行为。区分软件缺陷、方法规则和单物种例外。
-3. 局部修订并添加回归；保留 U6/U6atac、单 HSP 阈值、实际模型比对完整性、坐标、motif 与注释冲突的证据分层。
-4. 运行全套公开单元测试及受影响的小型真实搜索、独立 SeqKit QA。成员判定或坐标改变时，比较旧/新成员、边界和启动子序列。重要方法改变还需独立、未用于调参的验证案例。
-5. 检查公开范围和来源：无研究项目表、全基因组、PDF、令牌、个人路径；synthetic 控制需明确标记。保存第三方来源和许可；不要把新模型版本自动当作等价替代。
-6. 更新 `SKILL.md` 的 `metadata.version`、`CHANGELOG.md`、README 和版本 QA 摘要。生成对应 ZIP 与 SHA-256 文件清单；本地包、远端源码与实际安装副本分别核对。
-7. 提交并推送至 `yz3394/Genome-wide-plant-u6-identification`，创建 `plant-u6-identification-vX.Y.Z` 标签/Release。已有标签不移动；研究旧结果不覆盖。网页上传也可以，完成后同步网页产生的提交到本地仓库。
-8. 回读远端文件集、哈希、提交和标签后，报告同步结果及安装状态。网络、认证、冲突或验证失败时，保存本地修改并明确报告“未同步”，不跳过检查。
+1. Synchronize with the remote repository and inspect the working tree, installed version and the user's uncommitted changes. Preserve existing content.
+2. Record the issue, dependency versions, a minimal reproduction with documented provenance, and observed versus expected behavior. Distinguish software defects, methodological rules and species-specific exceptions.
+3. Make a scoped revision and add a regression test. Keep U6/U6atac classification, single-HSP thresholds, integrity assessed from actual model alignments, coordinates, motifs and annotation conflicts as separate evidence layers.
+4. Run the full public unit-test suite, any affected small searches using real reference sequences, and independent SeqKit QA. When membership decisions or coordinates change, compare old and new members, boundaries and promoter sequences. Substantial method changes also require independent validation cases that were not used to tune parameters.
+5. Check the public scope and provenance: exclude research-project tables, whole genomes, PDFs, tokens and personal paths; label synthetic controls explicitly. Preserve third-party sources and licenses. Do not automatically treat a new model version as an equivalent replacement.
+6. Update `metadata.version` in `SKILL.md`, `CHANGELOG.md`, the README and the version-specific QA summary. Generate the corresponding ZIP and SHA-256 file manifest. Check the local package, remote source and actual installed copy separately.
+7. Commit and push to `yz3394/Genome-wide-plant-u6-identification`, and create the `plant-u6-identification-vX.Y.Z` tag/Release. Do not move existing tags or overwrite historical research results. Browser uploads are also acceptable; afterward, synchronize the commits created through the browser to the local repository.
+8. Read back the remote file set, hashes, commit and tag before reporting the synchronization result and installation status. If network access, authentication, conflicts or validation failures block completion, preserve local changes and explicitly report `not synchronized`; do not skip checks.
 
-版本语义：补丁版用于兼容修复/分发修订；次版本用于兼容能力扩展；默认规则或输出不兼容改变使用主版本，并说明旧分析比较方法。版本大小不是生物学准确率证明。
+Version semantics: use a patch version for compatible fixes or distribution revisions, and a minor version for compatible capability extensions. Use a major version for incompatible changes to default rules or outputs, and explain how to compare earlier analyses. A higher version number is not evidence of greater biological accuracy.
 
-建议问题记录字段：版本/提交、物种与参考版本、可公开输入或哈希、复现命令、预期/观察结果、影响范围、修复、QA/未验证项、成员/序列差异、GitHub 与安装状态。
+Suggested issue-record fields: version/commit, species and reference version, shareable inputs or hashes, reproduction command, expected/observed results, scope of impact, fix, QA/unverified checks, membership/sequence differences, and GitHub and installation status.
 
-其他电脑主动选择标签安装或更新；不会自动覆盖。恢复旧标签前也应保存本地修改。分析时记录 skill 标签、Git commit、软件版本及实际文件哈希。
+Other computers explicitly select a tag to install or update; existing installations are not overwritten automatically. Preserve local changes before restoring an older tag. For each analysis, record the skill tag, Git commit, software versions and actual file hashes.
